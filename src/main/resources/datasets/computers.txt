@@ -1,0 +1,267 @@
+Il trentacinquennale di Amiga cade proprio oggi, ventitre luglio 2020, ed è una data decisamente importante per l’intera storia dei videogiochi e dell’informatica in generale. Poichè Commodore Amiga non è solo una piattaforma ludica di sicuro successo e ricordata dalla maggior parte dei videogiocatori di tutto il mondo, ma una vera e proprio rivoluzione nel mondo dei computer. Un sistema ideato del geniale e visionario Jay Miner, basato su un processore veloce, il celebre Motorola 68000 che diventerà, solo tre anni dopo, il cuore di un’altra piattaforma videoludica molto importante, ovvero SEGA Mega Drive. Uno dei primi computer di larga diffusione a sedici bit che apre letteralmente la generazione che sarà in seguito segnata da sistemi di culto come anche Super Nintendo ed SNK NEO GEO, nella doppia edizione AES ed MVS, che hanno scritto letteralmente la storia del settore, mandando pian piano in pensione i cari vecchi sistemi ad otto bit.
+La presentazione sul mercato avviene in un caldissimo giorno del luglio 1985, il ventitre, appunto, alla fiera di settore Computer Entertainment Show (CES), al Lincoln Center di New York, introdotto da una orchestra sinfonica, con in particolare il modello Commodore Amiga 1000, numerazione che ha acquisito solo in seguito al successivo rilascio di Commodore Amiga 500, sicuramente il modello più di successo della famiglia, ed il ridottissimo Amiga 600. L’evento è di proporzioni mondiali e coinvolge nomi importante dell’arte come quelli di Andy Warhol e Debbie Harry, leader del gruppo musicale delle Blondie in una performance di disegno dal vivo, in cui l’artista ha digitalizzato l’iconico volto della cantante su schermo in pochissimi minuti grazie al solo uso del mouse, senza alcun programma speciale o tavoletta grafica dedicata.
+“CON QUALI ALTRI COMPUTER HO LAVORATO IN PRECEDENZA? CON NESSUNO. STAVO ASPETTANDO QUESTO.”
+
+ANDY WARHOL
+n realtà il computer, ammetteranno in seguito i vertici di Commodore stessa, non era affatto completo, poiché il sistema operativo non era ancora stato finito di compilare dai programmatori, e per utilizzare i programmi Amiga di disegno usati durante la presentazione è stato in realtà utilizzato un Personal Computer prodotto da Sun Microsystems, un piccolo grande inganno che tutti i fan della Grande C hanno perdonato negli anni, una volta svelato l’inghippo. Amiga, oggi, è ricordato non solo come sistema multimediale, ma soprattutto per il suo enorme catalogo di videogiochi.
+Commodore Amiga 1000, all’epoca noto solo come Amiga, senza numerazione, è stato messo in commercio dal successivo mese di Settembre, una volta completato il sistema operativo, al prezzo al pubblico di 1500 dollari. Il sistema ha presentato un’interfaccia grafica a colori, un multitasking basato su finestre, mutuato dai sistemi operativi professionali di XEROX ed una rivoluzionaria architettura multiprocessore, il cui cuore è appunto il suddetto Motorola 68000.
+
+L’Home Computer targato Commodore va a collocarsi in diretta concorrenza con sistemi di fascia alta basata sul medesimo processore, ovvero ATARI ST e Apple Macintosh. Il trentacinquennale di Amiga è un evento molto importante, sebbene i modelli della famiglia presentati negli anni sono decisamente molti, tra questi ricordiamo Amiga 1200 e la versione console Commodore Amiga CD 32, che anticipa il mercato delle console a 32 bit, come Sony PlayStation e SEGA Saturn. Buon Compleanno caro vecchio AMIGA!
+Cos'è il The C64 Maxi? Perché agli appassionati non è bastata la più economica versione Mini? Cerchiamo di spiegarlo nel corso della recensione. Le mini console sono oggetti feticcio che solitamente vengono rimirate più che utilizzate. Sono involucri di plastica dalla forma evocante hardware del passato, che valorizziamo più come strumenti di affermazione identitaria che come macchine da gioco vere e proprie
+Non sono solo uno specchio più o meno fedele di ciò che siamo stati, ma soprattutto un modo per celebrarlo e riportarlo per un momento nel presente, anche se in una versione mitizzata, quasi antistorica.
+Le mini console funzionano quando riescono ad avvicinarsi a questa immagine utopica, meglio sarebbe dire retrotopica, che abbiamo del nostro passato videoludico, servendo con hardware e software i nostri ricordi distorti. Per inciso, un NES mini senza Super Mario Bros. non funzionerebbe a prescindere da tutti gli altri giochi inclusi, perché il ricordo che abbiamo di quella macchina è indissolubilmente legato a quel gioco... anche se non l'abbiamo mai posseduta.
+
+Il problema del The C64 Mini non era tanto nei titoli selezionati, quanto nell'hardware. I computer, anche negli ormai remoti anni '80, essendo delle macchine ad accesso libero e su cui chiunque poteva sviluppare e pubblicare ciò che voleva, avevano delle librerie di giochi sterminate rispetto a quelle delle console, librerie nelle quali si trovava di tutto e di più: dall'avventura testuale, al gioco di ruolo, al simulatore e a qualsiasi titolo di qualsiasi altro genere vi possa venire in mente.
+Pensate che il Commodore 64 conta quasi 30.000 giochi prodotti nei suoi anni di attività (in verità se ne realizzano ancora oggi, ma non allontaniamoci troppo), una quantità di molto superiore a quella delle librerie di NES, Sega Master System, Sega Megadrive e Super Nintendo messe insieme. Ovviamene in quel mare magnum c'erano tantissimi titoli dimenticabili, a essere buoni, ma anche tanta sperimentazione che ha portato all'emersione di veri e propri capolavori e al consolidamento di una scena che ha fondato buona parte del mondo dello sviluppo europeo e che ancora oggi produce i suoi frutti.
+Comunque sia una simile offerta e la mancanza di un produttore hardware di riferimento che finanziasse anche il software ludico (in realtà Commodore produsse giochi fino al 1984/85, ma con non molta convinzione) rende difficile legare l'identità di una macchina come il Commodore 64 a dei singoli giochi. Ognuno ha i suoi, verrebbe da dire, anche perché i modi di realizzazione e diffusione dei prodotti erano diversissimi da quelli attuali.
+
+Questioni d'identità
+Se dovessimo indicare l'elemento più caratterizzante del Commodore 64 non avremmo dubbi: il linguaggio di programmazione Basic. Era la prima cosa che si vedeva accendendolo ed era obbligatorio apprenderne alcune semplici istruzioni per poter lanciare i giochi e fare qualsiasi cosa.
+Solo usando le poche cartucce esistenti, molto più costose delle cassette o dei floppy disk, si poteva bypassare il Basic, che comunque rimaneva un passaggio irrinunciabile se si voleva trarre il meglio dalla macchina. E come si accedeva a quel meraviglioso linguaggio di programmazione, che a volte dava sì tanti problemi, ma che per molti fu anche la porta verso la consapevolezza di come funzionano i computer e di come si realizzano i videogiochi? Tramite la tastiera.
+
+Ciò che mancava al The C64 Mini era proprio questo: lo strumento principale per accedere all'elemento identitario primario di ciò che il C64 fu. Il Basic c'era, ma per utilizzarlo bisognava montare una tastiera esterna, che in qualche modo spezzava il flusso della memoria. L'inclusione di un joystick simile a quelli che giravano all'epoca non era sufficiente, per il semplice motivo che non esisteva un singolo joystick per Commodore 64, ma molti e di molte marche differenti. Anche la Commodore produsse i suoi, ma erano davvero fragili e poco maneggevoli, tanto che si passava ad altro appena si poteva. Del resto se nessuno ha chiesto di replicarli per le console celebrative un motivo ci sarà.
+
+La tastiera invece era la stessa per tutti, con quei tasti pesanti anche alla vista che avevano un aspetto tozzo e sgraziato, in linea con quello del computer, e una corsa lunga e resistente, tanto che alle volte si finiva per batterci sopra con una discreta forza, più che premerli con la delicatezza cui siamo abituati oggi.
+Ecco, senza una tastiera funzionante il C64 Mini falliva completamente il suo tentativo di malia e si rivelava subito per quello che era: un pezzo di plastica capace di far girare il software del Commodore 64 tramite emulazione, ma distante anni luce dall'esperienza originale, fatta non solo di giochi, ma anche di lunghe ore passate a digitare i listati rinvenuti sulle riviste che si acquistavano in edicola e di striminziti tentativi di programmazione. 10 print "Ciao mondo" / 20 go to 10 / run.
+
+Il sistema
+Il The C64 Maxi è sostanzialmente un C64 Mini con le dimensioni di un Commodore 64 vero e una tastiera funzionante, oltre che con una selezione di titoli leggermente diversa. Anche il prezzo è più generoso, visto che si parla di circa il doppio rispetto alla versione ridotta (119€ contro 79€, ma la mini si trova ormai a prezzo ridotto), ma stiamo comunque parlando di un prodotto più complesso, che ha senso proprio perché si propone come una replica il più possibile fedele all'originale.
+
+La forma a bauletto è stata rifatta alla perfezione, così come i colori: beige topo per la scocca, marrone scuro per i tasti, a parte gli F che sono un grigio smorto. "Ora sì che il The C64 somiglia a un Commodore 64!" verrebbe da dire. Non per niente il colpo d'occhio, quantomeno per un nostalgico, è eccezionale e quasi non sembra di trovarsi di fronte a un hardware completamente nuovo.
+Parlando di dotazione, oltre al computer nella confezione si trovano i cavi dell'alimentazione, quello HDMI e un joystick. In realtà c'è anche uno striminzito manualetto che rimanda alla versione PDF scaricabile dal sito ufficiale per avere maggiori dettagli.
+
+Il software di sistema è invece quasi identico a quello del C64 Mini, aggiornato all'ultima versione del firmware (la 1.14), e non poteva essere diversamente. Il The C64 Maxi può quindi essere avviato in modalità carosello, con accesso immediato alla galleria dei giochi inclusi, nonché alle opzioni di configurazione, oppure in modalità originale, quindi con subito la schermata del Basic. Da notare che il software, basato sul VICE, emula perfettamente non solo il Commodore 64, ma anche il Vic 20, con tanto di sistema operativo di entrambe le macchine, scambiabili a piacimento. Anche alcuni dei giochi inclusi sono in realtà per Vic 20 e non per Commodore 64.
+
+Come dicevamo, il firmware è già aggiornato, quindi è possibile lanciare software esterno tramite una qualsiasi pennetta USB da massimo 64GB con grande facilità, inserendola in una delle quattro prese USB presenti sulla scocca. Il sistema la riconoscerà automaticamente facendo apparire l'icona di selezione in fondo allo schermo. Da lì è possibile accedere a un vero e proprio browser di file con lo stile grafico del C64, che permette di selezionare l'immagine disco / cassetta / cartuccia desiderata. Si tratta di una possibilità importante, soprattutto per chi continua a seguire la scena moderna dello storico computer, che conta molte nuove uscite.
+
+Ad esempio siamo riusciti a giocare tranquillamente a titoli quali Planet Golf, Mancave, Age of Heroes, Precint 20: Dead Strange, Sizzler e altri usando le immagini fornite dagli sviluppatori stessi, già ottimizzate per la linea The C64. Infine, anche a livello di opzioni di configurazione stiamo dalle parti del C64 Mini, con la possibilità di selezionare la lingua di sistema e, soprattutto, di simulare i vecchi televisori 4:3 sui moderni schermi, sia con il segnale PAL che NTSC, un'opzione davvero molto amata dagli appassionati di retrogaming.
+
+Il Joystick
+Il joystick incluso nella confezione del The C64 Maxi è identico nell'aspetto a quello del C64 Mini, ma non nella costruzione, qui a micro switch che imita la foggia di alcuni famosi joystick del Commodore 64. Oltre alla leva centrale e ai due tasti principali, abbiamo però degli altri tasti che servono per la gestione del sistema, che danno quindi subito accesso all'interfaccia generale del firmware con relative opzioni, come il salvataggio di stato o il ritorno immediato al carosello. È molto solido nell'impugnatura, lo stick è un po' duro nei movimenti e la pressione dei tasti di gioco abbastanza pesante.
+
+Microswitch Joystick
+Se vogliamo è un'ottima replica di certi joystick che utilizzavamo all'epoca, con sofferenza annessa.
+
+Ovviamente il joystick è già configurato per tutti i giochi pre-installati, ma funziona molto bene anche con quelli caricati esternamente, soprattutto quelli più moderni i cui sviluppatori hanno tenuto in considerazione la possibilità di utilizzo con questo nuovo hardware. L'unica difficoltà rimane quella di utilizzare i giochi che di default richiedono il joystick in porta 1. Come per il C64 Mini non esiste un sistema di scambio automatico delle porte, ma bisogna o acquistare un secondo joystick / gamepad compatibile e collegarlo (sarà assegnato automaticamente alla porta libera), oppure creare un piccolo file di configurazione per ogni gioco con cui dire alla macchina di avviare il joystick in porta 1.
+
+I giochi
+I sessantaquattro giochi pre-installati nel The C64 Maxi sono in piccola parte differenti rispetto a quelli del The C64 Mini. Molti sono stati confermati, come Alleykat, Bounder o Avenger, ma ci sono anche delle novità, come buona parte del catalogo di Llamasoft. Peccato per la rimozione di alcuni giochi di Thalamus come Hunter's Moon, Hawkeye e Creatures, che ovviamente si possono facilmente recuperare in altro modo (di Hunter's Moon esiste anche un'edizione rimasterizzata, purtroppo non utilizzabile con il The C64 Maxi o Mini).
+
+Leggiamo l'elenco completo inclusi nel The C64 Maxi:
+
+Alleykat
+Anarchy
+Attack of the Mutant Camels
+Avenger
+Battle Valley
+Bear Bovver
+Boulder Dash
+Bounder
+California Games
+Chips Challenge
+Confuzion
+Cosmic Causeway
+Cyberdyne Warrior
+Cybernoid II
+Deflektor
+Destroyer
+Everyone's a Wally
+Firelord
+Galencia
+Gateway to Apshai
+Gribbly's Day Out
+Gridrunner (VIC 20)
+Heartland
+Herobotix
+Highway Encounter
+Hover Bovver
+Impossible Mission,
+Impossible Mission II
+IO
+Iridis Alpha
+Jumpman
+Mega Apocalypse
+Mission AD
+Monty Mole
+Monty on the Run
+Nebulus
+Netherworld
+Nodes of Yesod
+Paradroid
+Pitstop II
+Planet of Death
+Psychedelia (VIC 20)
+Ranarama
+Robin of the Wood
+Silicon Warrior
+Skate Crazy
+Speedball 2
+Spindizzy
+Steel
+Street Sports Baseball
+Street Sports Basketball
+Summer Games II
+Super Cycle
+Sword of Fargoal
+Temple of Apshai Trilogy
+The Arc of Yesod
+Thing Bounces Back
+Thing on a Spring
+Trailblazer
+Uridium
+Who Dares Wins II
+Winter Games
+World Games
+Zynaps
+Vic20 Basic Koch
+
+A questo punto per qualcuno varrebbe la pena di chiedersi come sono invecchiati questi giochi. Sinceramente ci sembra una domanda oziosa, perché semplicemente sono invecchiati e tutti, chi più, chi meno, richiedono una minima fatica per essere fruiti, nonché la comprensione dei limiti della macchina su cui giravano per essere apprezzati. Quando si parla di retrogaming e ci si chiede se un gioco del passato può divertire un giocatore contemporaneo si assume un punto di vista che non esitiamo a definire ottuso. La scelta per un nuovo giocatore non può essere tra Gears 5 e Nebulus, per fare un esempio, mentre un vecchio giocatore dovrebbe sapere più o meno cosa attendersi da entrambi. Quando il retrogaming diventa mitizzazione del passato, il classico "te lo ricordi", assume di fatto una sfumatura patologica. Andrebbe invece vissuto come un modo per conoscere ciò che è stato e comprendere com'è cambiato il nostro medium nel corso degli anni.
+
+Iridis Alpha C64 01 Koch
+Dovrebbe quindi essere mirato a rispondere alla domanda "da dove veniamo", senza pretendere di sovrapporlo al presente. Una specie di ricerca mossa dalla curiosità, non certo dalla noia.
+
+Si poteva fare di meglio in termini di selezione? Considerando che, come già detto, stiamo parlando di una macchina con una libreria di circa 30.000 giochi, è facile dire che si sarebbero potute realizzare molte selezioni differenti, tutte altrettanto valide e tutte con qualche mancanza. Ciò che possiamo dirvi è che acquistare il The C64 per i giochi inclusi è da ingenui, perché rappresentano solo la punta dell'iceberg dell'esperienza. Del resto, come già sottolineato, non stiamo parlando di un sistema chiuso come le altre mini console, ma è previsto che si possa aggiungere software esterno. Senza fare i finti tonti, ciò significa che se volete giocarvi il vostro titolo preferito sul The C64 Maxi potete farlo senza problemi cercandolo nella vostra 'raccolta'. Quindi via di Wizball, Turrican e Microprose Soccer a manetta
+
+Mayhem In Monster Land
+Released: 1993
+There was no question of this not making the Top 10, what with it being regarded by many as the C64’s last great release both in terms of gameplay and sheer technical achievement. As most already know, it infamously used a “bug” in the graphics chip, which allowed entire screen scrolling and therefore much smoother and faster gameplay. Despite being a C64 title it has all the speed and tactile control you’d expect from an early 1990s platformer, which not only guarantees it a place here but also means it’s still great to play even today. Being a dinosaur and returning colour to the land has never been such fun.
+
+Turrican
+Released: 1990
+There’s an unwritten law in videogames that states: all C64 lists must feature at least one Manfred Trenz game. While many will no doubt argue that Trenz’s Turrican II is clearly the better game, we’ve decided to stick with the original, mainly because there was nothing quite else like it when it first appeared in 1990. It may well have borrowed heavily from obscure coin-op Psycho-Nics-Oscar, but Trenz’s technical wizardry of Commodore’s machine simply blew us away, and it still manages to impress today.
+Part platformer, part shooter, Turrican features incredible visuals, a stunning score by music maestro Chris Hülsbeck and some of the most frenetic gameplay around. It fully deserves every accolade that has been bestowed on it.
+
+Impossible Mission
+Released: 1984
+We featured a Making Of article on Dennis Caswell’s timeless classic in Issue 22, so by now all of you should have had a chance to experience this classic game. Impossible Mission was a perfect blend of joystick waggling dexterity (especially when avoiding the terrifying spheres of floaty-electric-death), and also tricky puzzles (many had problems with the final password-piece assembly). Although its premise of searching furniture (to find those elusive passwords) and avoiding robots may sound nauseatingly simple, it made for a game, which was easy to get into but difficult to put down. Although ported to several other systems, for us the C64 original is still the best version.
+
+
+Paradroid
+Released: 1985
+Ask any C64 owner to name their favourite games, and chances are that this superb effort from Andrew Braybrook will almost always make their top five. Taking control of a weak prototype droid, your aim is to simply clear each boarded spaceship (of which there are eight) of its out-of-control robots. While your droid is woefully underpowered (even Dusty Bin could have it in a scrap) it does retain the unique ability to transfer itself into any available droid (albeit for a limited amount of time). This enables it to take out the ship’s more dangerous foes (via a charming mini-game) and adds an interesting play mechanic. With its subtle blend of strategy and blasting, Paradroid deserves to be in every C64 owner’s collection.
+
+paradroidWizball
+Released: 1987
+Playing Wizball was a rites of passage for many Commodore 64 owners and became more than ample ammunition for those who wanted to taunt their CPC and ZX Spectrum owning peers. Insanely smooth scrolling, a scintillating soundtrack from the always dependable Martin Galway and its slick blending of genres means that Wizball will forever remain within the higher echelons of Commodore 64 classics. It might well have taken a while to get used to your ball’s incessant bouncing, but once you finally mastered it and collected a few power-ups Wizball’s true identify and depth are revealed. Quite possibly one of the most beautifully crafted C64 games that you’ll ever have the privilege to play.
+
+Top Ten Commodore 64 GamesProject Firestart
+Released: 1989
+Many games claim to have pioneered the survival-horror genre but, while others came before it, Project Firestart is one of the very best and is still supremely enjoyable today. Your task is to dock with a research vessel in space and find out why there’s been no communication. From the start, when you see the body of a dead crewmember who has written the word “danger” in their own blood, you know it’s going to be an incredibly tense mission with plenty of twists and turns. Throughout the ship are mutilated bodies, log reports, even a survivor; then you encounter the terrifying invisible enemies, which randomly appear. Multiple endings guarantee regular returns to that hellish place.
+
+project firestartZak McKracken And The Alien Mindbenders
+Released: 1988
+It’s only fair to list one of Lucasarts’ excellent games. But we can already hear a great disturbance, as if millions of voices suddenly cried out in terror, due to our choice. Yes, we could have listed Maniac Mansion, but everyone knows Maniac Mansion. Zak McKracken is arguably just as good, and the journalistic setting struck a chord in the office. Traversing the entire globe Zak encounters aliens disguised with Groucho Marx style nose-glasses and cowboy hats. Throw into the mix wacky sidekicks, a bus which travels to mars, plus some bitingly witty newspaper headlines, and you have one hell of a crazy adventure.
+
+Top Ten Commodore 64 Games
+
+Tags: bubble bobble, c64, commodore 64, IK+, impossible mission, project firestart, the sentinal, zak
+
+The latest issue of Retro Gamer magazine
+TOP TEN AMIGA CD32 GAMES
+by Retro Gamer Team, 13 January 2014
+125,849 views4 comments
+The death of Commodore meant that the CD32 never really had a fighting chance when it was released in 1993. It tried its best however, and while it featured a lot of ports, there are still plenty of great games for owners to collect.
+
+CD 32
+
+Diggers
+Released: 1993
+One of the bundled launch titles for the star-crossed console, Diggers followed the antics of four mining concerns on the planet Zarg as they competed, with the help of the user, to rob the world of its resources. Diggers hasn’t aged well, as it clearly attempted to mimic the success other strategy/management games had seen on the Amiga. The joypad provided a frustrating interface experience, but fortunately Millenium had the foresight to allow mouse control. Clean, if uninspired, graphics and chirpy tunes made it an enjoyable title for the right gamer, but was probably a bad choice for a bundled game. It far, far better than its accompanying launch title (Oscar) mind you.
+
+Top Ten Amiga CD32 GamesWorms
+Released: 1995
+Worms appears to have been released on practically every gaming platform known to man, so it should come as no surprise to learn that the CD32 received a version of its very own. It should also come as no surprise to learn that, like many other CD32 titles that have been mentioned on these two pages, Worms was pretty much identical to the original Amiga 500 version. Again though, it’s a wonderful little title and the ability of the CD32’s mouse meant that those pesky little annelids were just as easy to control on Amiga’s console as they were on its home computer. Interestingly, a legal download of the CD32 version of Worms appears on the Dream17 website, so check it out at www.dream17.co.uk/softography.php?id=27&s=downloads.
+
+Top Ten Amiga CD32 GamesFlink
+Released: 1994
+One of the few dedicated CD32 games, from 16-bit legend Psygnosis. Also known as The Misadventures Of Flink, this game made full, unabashed use of the monumental storage space available on these new-fangled CD ROMs and greatly beneffited from it. The back story is pretty standard stuff (a wizard’s apprentice putting paid to some evil dude’s nefarious antics), but what’s fascinating is the impressive number of cross-genre elements seamlessly blended into the gameplay. RPG, beat-‘em-up, shmup, puzzle and adventure all intertwine in this impressive demonstration of what the CD32 was really capable of. The whole thing gets kicked in the nads by a crippling lack of a save option, however. Damn shame about that. Yes sir.
+new flinkBanshee
+Released: 1994
+It’s rare to find a decent shmup on the Amiga and even rarer to discover one on the CD32, so when you discover one as good as Banshee you’re not going to let it out of your sight. Obviously based on Capcom’s 1942 series, Banshee is a tough as nails shooter that will have you gnashing your teeth in frustration as you gaze dumbstruck at its stunningly crisp visuals and hectic onscreen action. It may not be the most original of concepts but it has been put together with such flair and obvious skill that it really doesn’t matter in the slightest. Fortunately for CD32 owners, Banshee plays perfectly fine with the machine’s joypad and Core Design even saw fit to include an extra two levels to fight through. Those with a fetish for tough blasters would do well to track this down straight away.
+Top Ten Amiga CD32 GamesGuardian
+Released: 1994
+It wouldn’t be at all unreasonable to classify this unimaginatively titled game as ‘Starfox for the Amiga generation’. A dynamic, playable and brightly coloured 3-D shmup that, for once, was actually better when using the CD32’s nasty joypad thing. Many early 3-D fly-‘em-ups descended into tedious simulations, rather than the zoom-around-blowing-stuff-up type games we really wanted, but Guardian shrewdly kept itself well within the “hit ‘em hard, hit ‘em fast” parameters. By keeping up the game speed and making the ship as controllable as possible, it elegantly camouflaged the somewhat limited gameplay and ticks all the right boxes for a proper console game, which, in retrospect, was exactly what the CD32 lacked and so desperately needed.
+
+Top Ten Amiga CD32 GamesBeneath A Steel Sky
+Released: 1994
+Along with The Secret of Monkey Island and Indiana Jones & The Fate Of Atlantis, Revolution’s Beneath A Steel Sky is quite possibly one of the greatest Amiga point-and-click adventures ever made. Like many CD32 ports, BASS didn’t push the console in any way other than offering superior music and greatly reduced loading times, but in a way this didn’t matter. It certainly took a while to get used to the CD32’s rather clunky pad, but play this with a mouse and everything became much more enjoyable. Beneath A Steel Sky may be little more than a basic port, but it’s a basic port of one of the Amiga’s greatest adventures, and owners of the machine rightly lapped it up.
+
+beneath a sateel skyAlien Breed: Tower Assault
+Released: 1994
+Team 17 was well known for going above and beyond the call of duty when it came to porting games across to the CD32, and the superb Tower Assault was no exception. Featuring an extremely lengthy intro, beautifully drawn sprites, a new retreat move that enabled you to walk backwards while firing, and plenty of over-the-top blasting action, Tower Assault was yet another excellent blaster from Team 17 and was perfectly suited to the CD32. Vastly superior to the PC version that appeared at the same time, Tower Assault was a stunning shooter that deserves to be in every CD32 owner’s collection. If that wasn’t enough, it also came with an AGA enhanced version of Alien Breed II: The Horror Continues.
+
+alien breedD/Generation
+Released: 1993
+A prime example of why the CD32 ultimately failed to grab the attention of seasoned gamers. D/Generation was already a fairly well respected game, so using it to acclimatise Amiga-philes to the new machine wasn’t a bad idea. In principle. The decent isometric run-and-gun gameplay – interspersed with puzzler elements as the player infiltrates a building infested with out-of-control bio weapons – made zero use of the console’s capabilities. The massive storage space of the CD was totally ignored, the joypad control was as effective as a one-legged man in an arse-kicking contest and the sparse graphics left players wondering why they didn’t just stick with their Amiga 500. It’s still a damn good game though…
+
+Top Ten Amiga CD32 GamesSimon The Sorcerer
+Released: 1994
+Like Beneath A Steel Sky, Simon The Sorcerer was another classic 500 title that greatly benefited from the CD32’s storage capacity. While there were no improvements in Simon’s visuals, the new soundtrack and superb voice recordings greatly enhanced Simon The Sorcerer’s atmosphere. Indeed, Chris Barrie’s voiceover for Simon was a revelation and set high standards for other companies to follow. Sure, he had the deepest 12-year-old voice that you’d ever heard, but there was no denying that his acidic tongue perfectly suited Simon’s many sarky one-liners. It may be little more than a port, but, with the greatly reduced loading times and superb voice acting, fans should snap it up straight away.
+
+simon the sorceredZool
+Released: 1993
+Zool is generally considered as one of the greatest Amiga platformers ever made – hardly surprising when it has no Mario or Sonic games – so it should come as no surprise to learn that the CD32 version was obviously the best incarnation of the bunch. Whilst a little too garish at times, Zool’s cinematic opening, frenetic soundtrack and console styled nature means it’s perfectly suited to the CD32, and best of all there’s a brand new massive world to explore. Whilst Zool was never in the same league as the aforementioned platforming superstars (you can kid yourself otherwise but you know it’s not true), it had no equal on the Amiga, so why not treat yourself to the definitive version of the game? Go on. You know it makes perfect sense.
+
+Top Ten Amiga CD32 Games
+
+Tags: alien breed, banshee, beneath a steel sky, CD32, commodore, dgeneration, diggers, guardian, simon the sorcerer, worms, zool
+
+TOP TEN MEGA DRIVE GAMES
+by Retro Gamer Team, 7 January 2014
+161,555 views12 comments
+mega driveMany consider the Mega Drive to be Sega’s best console and it’s not hard to see why. It had a huge number of diverse games, and some of the best arcade conversions around. Oh and it also signalled the launch of a little hedgehog called Sonic…
+
+Sonic The Hedgehog
+Released: 1992
+After the success of the original Sonic The Hedgehog, it came as no surprise to see the lovable scamp returning a year later in a brand new adventure. With a refined engine, the addition of Miles “Tails” Prower, a greatly enhanced bonus stage and an excellent two-player mode, Sonic The Hedgehog 2 is easily one of the hedgehog’s most memorable 16-bit outings. While the core gameplay is little different to that seen in the original, Sonic Team threw in plenty of new touches to ensure that gamers wouldn’t feel short-changed. The end result is not only one of the Mega Drive’s greatest platformers, but quite possibly the hedgehog’s finest hours on any system.
+Sonic 2Devil Crash
+Released: 1991
+There’s a few pinball games on Sega’s Mega Drive but this superb 1991 offering from Techno Soft remains a firm favourite. While it only features one main table, it’s well designed and boasts all manner of different bonuses that lead you to several smaller, mini-tables. While Techno Soft’s previous pinball title Alien Crush featured an alien theme, Devil Crash has chortling knights, chanting monks and dragons occupying its tables. Released in the UK as Dragon’s Fury, Devil Crash is a superb pinball game that should last you forever. Oh, and it’s got one of the most rocking soundtracks we’ve ever heard.
+
+devil crashGunstar Heroes
+Released: 1993
+Outrageously good platformer/shooter that features dazzling graphics, a crazy relentless pace and dozens of fantastic boss encounters. Created by a bunch of ex Konami staffers (you should all know the story by now) Gunstar Heroes does tricks with the Mega Drive’s hardware that many thought impossible, and even today it has a freshness that belies its 20-year-old roots. While special mention must obviously go to the game’s astounding visuals, Treasure also ensured that the gameplay was just as special and injected all manner of interesting play mechanics to ensure that every level remains as fresh as a proverbial daisy. If you’re after a frenetic blaster then look no further. This is run-’n-gun heaven and shouldn’t be missed.
+
+gunstar heroesStreets Of Rage 2
+Released: 1993
+As with Sonic The Hedgehog 2, Sega took everything that made the original Streets Of Rage so fun to play and turned it up to 11. The visuals have had an overhaul with all the heroes and enemies being beefed up and boasting greatly improved detail. Yuzo Koshiro is back with another thumping soundtrack and the game’s many bosses are tougher than ever. Each character now has a selection of special moves and there are four different protagonists to choose from: Axel and Blaze from the original game and new boys Skate and Max. A magnificent scrolling fighter that’s crying out for a next-gen remake.
+
+streets of rage 2Strider
+Released: 1991
+Oh come on, did you really think we’d do a Mega Drive top ten and not feature Strider? Despite Darran’s obsessive love for Capcom’s purple clad ninja (it’s a long sad story) Strider’s addition is easily justified, as it’s quite simply the strongest arcade port on Sega’s 16-bit console. Not only does it capture all the character of the coin-op classic, it goes one step further and delivers a stunning soundtrack that actually manages to improve on the arcade original. Sure there’s a fair amount of flickering here and there but as far as capturing the essence of the original game goes no other Mega Drive conversion comes close. Essential.
+
+Top Ten Mega Drive GamesDesert Strike: Return To The Gulf
+Released: 1992
+Set a year after the events in the Gulf War, Desert Strike sees you climbing into an Apache and using it to stop a despot in the Middle East from starting World War III. Utilising an isometric viewpoint, EA’s blaster saw you storming into armed bases to rescue POWs, whilst using your firepower to take out anything that stood in your way. Despite the destruction you can cause, Desert Strike is quite a cerebral affair, with many of the later levels requiring a fair amount of strategy to complete. The thinking man’s shoot-’em-up.
+
+desert strikeShinobi III: Return Of The Ninja Master
+Released: 1993
+Despite a lengthy development period, Shinobi III’s four-year wait was worth it. Not only has the pace been increased, your ninja now knows a selection of new skills. Flying-kicks, a running dash and using your hands to swing across ceilings are just a few of the new abilities you can use and all have been perfectly integrated into the game. There are even sections where you can ride horses or surf along the crest of a wave, dispensing bad guys as you go. If only the later games showed a tenth of the imagination of Shinobi III…
+
+shinobi IIIEcco The Dolphin
+Released: 1993
+Delightful underwater adventure that sees you trying to rescue your dolphin friends when they all get sucked up by a mysterious hurricane. With its focus on exploring the expansive stages and its many devious puzzles, Ecco The Dolphin was quite unlike any other game at the time and instantly caught the public’s attention. The underwater environments are full of detail and bursting with all sorts of exotic undersea creatures. Our only real complaints with Ecco is that some of the sections can be difficult to negotiate, ruining the otherwise tranquil atmosphere.
+
+Top Ten Mega Drive GamesThunder Force IV
+Released: 1993
+While Thunder Force III was never released in the UK, Sega atoned by releasing its superb sequel in 1993. Techno Soft’s fourth Thunder Force title (and the third to appear on the Mega Drive) boasted amazing visuals, over-the-top weaponry and a stunning soundtrack that perfectly complemented the frenetic on-screen action. As with Thunder Force III, the first four levels could be approached in any order, but the stages themselves were far larger in scope and featured both vertical and horizontal sections. Throw in some insanely tough bosses, plenty of exotic locations and those stunning visuals and you have one of the Mega Drive’s classiest shooters.
+
+thunder force 4Shining Force II
+Released: 1994
+While it essentially features the same combat system and gameplay mechanics as the original Shining Force, Sega’s sequel is generally considered by many to be a far superior RPG. Take the combat for example: it’s a lot quicker now, making fights far less of a chore than before, and the new counter-attacks add a great degree of spice to the proceedings. The interaction of items is also better integrated with little touches like automatically passing a picked up item to another character when your main hero’s pockets are full, and being able to view an item’s stats before you buy them means that everything flows along rather nicely. A superb RPG that shouldn’t be missed under any circumstances.
+
+shining force II
+
+Tags: desert strike, devil crash, devil crush, ecco, ecco the dolphin, gunstar heroes, mega drive, Sega, shining force II, shinobi III, sonic 2, streets of rage 2, strider, the super shinobi II, thunder force 4
+
+TOP TEN N64 GAMES
+by Retro Gamer Team, 6 January 2014
+130,475 views4 comments
+N64
+
+Nintendo’s 64-bit console may have had a relatively small library of games, but it still featured a huge number of heavy hitters, many of which are still revered today. Here’s our guide to ten of the very best releases for the machine. How many did you play?
+
+GoldenEye007
+Released: 1997
+When Rare’s GoldenEye first appeared in 1997 first-person console shooters were instantly given a massive shot in the arm (pun fully intended) and its impact sent shockwaves through the industry that continue to be felt to this day. Sniper rifles, four-way split screen, multiple missions, even duel analogue support (via two N64 pads) all made their first-person console debut in Rare’s excellent shooter and even today it remains incredibly fun to play. With its wonderfully designed missions, intelligently structured level design, excellent array of weaponry and utterly amazing multiplayer it should come as no surprise to learn that the only N64 game to ever succeed it was the development team’s very own Perfect Dark. High praise indeed
+
