@@ -21,11 +21,9 @@ import com.datumbox.framework.tests.abstracts.AbstractTest;
 
 import lombok.extern.slf4j.Slf4j;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Before;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test cases for CETR.
@@ -34,12 +32,7 @@ import org.junit.Before;
  */
 @Slf4j
 public class CETRTest extends AbstractTest {
-    
-	@Before
-	public void setUp() {
-		super.setUp();
-	}
-	
+    	
     /**
      * Test of extract method, of class CETR.
      */

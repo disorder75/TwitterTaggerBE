@@ -35,7 +35,7 @@ import com.datumbox.framework.tests.abstracts.AbstractTest;
 
 import lombok.extern.slf4j.Slf4j;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.net.URI;
 import java.util.Arrays;
