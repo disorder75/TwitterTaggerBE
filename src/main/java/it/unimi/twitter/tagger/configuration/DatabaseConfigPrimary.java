@@ -9,7 +9,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
+import com.zaxxer.hikari.HikariConfig;
+
+import lombok.extern.slf4j.Slf4j;
+
 @Configuration
+@Slf4j
 public class DatabaseConfigPrimary {
 
 	@Value("${db.driver-class-name}")
@@ -21,18 +26,30 @@ public class DatabaseConfigPrimary {
 	@Value("${db.datasource.primary.baseSchema}")
 	private String dbBaseSchema;
 	@Value("${db.datasource.primary.url}")
-	private String dbUrl;	
+	private String dbUrl;
+	
+	@Value("#{new Boolean(environment['spring.profiles.active']=='prod-heroku')}")
+	private boolean isHerokuProfile;
 	
 	@Primary
 	@Bean(name = "dataSourcePrimary")
 	@ConfigurationProperties(prefix = "db.datasource.primary")
 	public DataSource dataSource() {
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName(dbDriverClassName);
-		dataSource.setUrl(dbUrl);
-		dataSource.setUsername(dbUsername);
-		dataSource.setPassword(dbPassword);
-		dataSource.setSchema(dbBaseSchema);
-		return dataSource;
+
+		if (!isHerokuProfile) {
+			DriverManagerDataSource dataSource = new DriverManagerDataSource();
+			dataSource.setDriverClassName(dbDriverClassName);
+			dataSource.setUrl(dbUrl);
+			dataSource.setUsername(dbUsername);
+			dataSource.setPassword(dbPassword);
+			dataSource.setSchema(dbBaseSchema);
+			return dataSource;
+
+		} else {
+			log.info("configuring jdbc connection for Heroku environment via HikariConfig: {}", dbUrl);			
+			 HikariConfig config = new HikariConfig();
+			 config.setJdbcUrl(dbUrl);
+			 return (DataSource) config;
+		}
 	}
 }
