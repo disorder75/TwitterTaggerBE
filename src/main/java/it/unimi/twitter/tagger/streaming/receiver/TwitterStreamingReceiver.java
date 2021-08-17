@@ -73,7 +73,7 @@ public class TwitterStreamingReceiver {
 		try {
 			String url = twitterSearchStreamApiUrl + queryStr + twitterExpansionQuery + querySep + twitterMediaFieldsQuery + querySep + twitterPlaceFieldsQuery + querySep + twitterUserFieldsQuery;
 			twitterStream(twAuthApi.getBearer(), url, twStreamingData);
-		} catch (Exception e) {
+		} catch (ParseException | IOException | URISyntaxException | JSONException | InterruptedException | HttpException e) {
 			log.error("failed to retrieve streamed tweets. Err {}", e.getMessage());
 			onError = true;
 		} finally {
