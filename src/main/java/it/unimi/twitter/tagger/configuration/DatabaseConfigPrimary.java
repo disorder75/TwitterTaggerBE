@@ -9,8 +9,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-import com.zaxxer.hikari.HikariConfig;
-
 import lombok.extern.slf4j.Slf4j;
 
 @Configuration
