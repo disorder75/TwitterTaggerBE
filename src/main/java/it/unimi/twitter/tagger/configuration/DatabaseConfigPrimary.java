@@ -36,20 +36,16 @@ public class DatabaseConfigPrimary {
 	@ConfigurationProperties(prefix = "db.datasource.primary")
 	public DataSource dataSource() {
 
-		if (!isHerokuProfile) {
-			DriverManagerDataSource dataSource = new DriverManagerDataSource();
-			dataSource.setDriverClassName(dbDriverClassName);
-			dataSource.setUrl(dbUrl);
-			dataSource.setUsername(dbUsername);
-			dataSource.setPassword(dbPassword);
-			dataSource.setSchema(dbBaseSchema);
-			return dataSource;
+		if (isHerokuProfile)
+			log.info("The application is running with cloud Heroku profile");
+		
+		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+		dataSource.setDriverClassName(dbDriverClassName);
+		dataSource.setUrl(dbUrl);
+		dataSource.setUsername(dbUsername);
+		dataSource.setPassword(dbPassword);
+		dataSource.setSchema(dbBaseSchema);
+		return dataSource;
 
-		} else {
-			log.info("configuring jdbc connection for Heroku environment via HikariConfig: {}", dbUrl);			
-			 HikariConfig config = new HikariConfig();
-			 config.setJdbcUrl(dbUrl);
-			 return (DataSource) config;
-		}
 	}
 }
