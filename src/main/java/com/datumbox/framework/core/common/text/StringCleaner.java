@@ -35,7 +35,7 @@ public class StringCleaner {
     /**
      * All URLs are replaced within the text by using the TOKENIZED_URL constant.
      */
-    private static final String TOKENIZED_URL = " PREPROCESSDOC_URL ";
+    public static final String TOKENIZED_URL = " PREPROCESSDOC_URL ";
     
     /**
      * Mapping between SMILEYS_MAPPING and their tokenized representation.

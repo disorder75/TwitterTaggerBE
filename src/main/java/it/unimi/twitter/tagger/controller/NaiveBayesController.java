@@ -88,7 +88,7 @@ public class NaiveBayesController {
 		}
 		
 		log.info("classification: {}", classification);		
-		String text = StringCleaner.tokenizeURLs(classification.getText());
+		String text = StringCleaner.tokenizeURLs(classification.getText()).replace(StringCleaner.TOKENIZED_URL, "");
 		text = StringCleaner.tokenizeSmileys(text);
 		text = StringCleaner.removeExtraSpaces(text);
 		text = StringCleaner.removeExtraSpaces(StringCleaner.removeSymbols(text));
