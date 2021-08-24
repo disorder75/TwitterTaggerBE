@@ -138,7 +138,7 @@ public class TwitterStreamingReceiver {
 			rules.put("(criminalita OR carceri OR delinquenza OR illegalita OR giustizia) OR (#giustizia OR #criminalita OR #carceri OR #illegalita OR #delinquenza OR #sicurezza) lang:IT -is:retweet -is:reply -has:links","rule_italia_017");
 			rules.put("(olimpiadi) OR (#olimpiadi) lang:IT -is:retweet -is:reply -has:links","rule_italia_018");
 			rules.put("(campionato OR calcio OR legacalcio OR seriea OR coppe) OR (#campionato OR #calcio) lang:IT -is:retweet -is:reply -has:links","rule_italia_019");
-			rules.put("(autori OR televisione OR radioitaliana OR attori OR registi OR modelle OR fotografia OR arte) OR (#cinemaitaliano OR #televisione OR #radioitaliana OR #attori OR #registi OR #modelle OR #fotografia OR #arte) lang:IT -is:retweet -is:reply -has:links","rule_italia_020");
+			rules.put("(autori OR televisione OR radioitaliana OR attori OR registi OR modelle OR fotografia OR arteitaliana) OR (#cinemaitaliano OR #televisione OR #radioitaliana OR #attori OR #registi OR #modelle OR #fotografia OR #arteitaliana) lang:IT -is:retweet -is:reply -has:links","rule_italia_020");
 
 			/*
 			//rules.put("occupazione OR #occupazione OR #lavoro -is:retweet -is:reply -has:links lang:it","rule_italia_006");
