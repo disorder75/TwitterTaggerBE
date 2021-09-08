@@ -58,7 +58,7 @@ public class TwitterStreamingReceiver {
 	@Autowired
 	TwitterAuthApi twAuthApi;
 
-	@Scheduled(fixedDelay = 1000)
+	@Scheduled(fixedDelay = 1000 * 10)
 	public void streamTweets() {
 		/*
 		 *		Twitter API restriction:
@@ -120,9 +120,9 @@ public class TwitterStreamingReceiver {
 //			rules.put("(cinema OR televisione OR radioitaliana OR attori OR registi OR modelle OR fotografia OR arte) lang:IT -is:retweet -is:reply -has:links","rule_italia_020");
 
 			rules.put("(italiani OR Italia OR popoloitaliano) OR (#Italia OR #popoloitaliano OR #italiani) lang:IT -is:retweet -is:reply -has:links","rule_italia_001");
-			rules.put("(senato OR parlamento OR senatori OR parlamentari) OR (#senato OR #deputati OR #cameradeputati OR #governoitaliano OR #politica) lang:IT -is:retweet -is:reply -has:links","rule_italia_002");
+			//rules.put("(senato OR parlamento OR senatori OR parlamentari) OR (#senato OR #deputati OR #cameradeputati OR #governoitaliano OR #politica) lang:IT -is:retweet -is:reply -has:links","rule_italia_002");
 			rules.put("(economia italiana OR mercati OR economia) OR (#borsa OR #economiaitaliana OR #economiaitalia OR #sviluppo OR #investimenti) lang:IT -is:retweet -is:reply -has:links","rule_italia_003");
-			rules.put("(industriali OR industria italiana OR industria OR fabbriche OR produzione) OR (#industria OR #confindustria OR #industriali OR #industriaitaliana OR #aziende) lang:IT -is:retweet -is:reply -has:links","rule_italia_004");
+			//rules.put("(industriali OR industria italiana OR industria OR fabbriche OR produzione) OR (#industria OR #confindustria OR #industriali OR #industriaitaliana OR #aziende) lang:IT -is:retweet -is:reply -has:links","rule_italia_004");
 			rules.put("(istruzione OR insegnamento OR maestre OR maestro) OR (#maestri OR #istruzione OR #scuola OR #scuolapubblica OR #scuolaitaliana) lang:IT -is:retweet -is:reply -has:links","rule_italia_005");
 			rules.put("(occupazione OR lavoro OR prospettive OR industrializzazione OR sviluppo OR prospettiva OR operai OR disoccupazione) OR (#occupazione OR #lavoro OR #prospettiva OR #lavoro OR #inps OR #sindataci OR #cgil OR #delocalizzazione OR #disoccupazione) lang:IT -is:retweet -is:reply -has:links","rule_italia_006");
 			rules.put("(pensioni OR lavoro OR pensioneintegrativa OR terzaeta) OR (#terzaeta OR #pensioni OR #pensionati OR #pensionamento OR #quotacento OR #contributivo OR #retributivo OR #sistemapensionistico OR #pensioneintegrativa) lang:IT -is:retweet -is:reply -has:links","rule_italia_007");
@@ -130,14 +130,14 @@ public class TwitterStreamingReceiver {
 			rules.put("(matrimoni OR divorzi OR natalita OR mortalita OR nascite OR popolazione) OR (#matrimoni OR #divorzi OR #popolazione OR #mortalita OR #natatalita OR #nascite) lang:IT -is:retweet -is:reply -has:links","rule_italia_009");
 			rules.put("(motociclismo OR motociclette OR piloti OR automobilismo OR bolidi OR formula1) OR (#classeregina OR #motociclismo OR #piloti OR #casecostruttrici) lang:IT -is:retweet -is:reply -has:links","rule_italia_010");
 			rules.put("(sperimentazione OR vaccini OR scienza OR ricerca OR laboratori OR ricercatori) OR (#vaccini OR #ricercatori OR #scienza OR #innovazione OR #ricerca OR #cervelli OR #laboratori) lang:IT -is:retweet -is:reply -has:links","rule_italia_011");
-			rules.put("(pianeti OR esplorazione OR galassia OR spazio OR stelle OR alieni) OR (#esplorazionespaziale OR #missionispaziali OR #agenziaspaziale OR #astronauti OR #alieni OR #pianeti OR #galassia OR #spazio OR #stelle OR #viaggispaziali) lang:IT -is:retweet -is:reply -has:links","rule_italia_012");
+			//rules.put("(pianeti OR esplorazione OR galassia OR spazio OR stelle OR alieni) OR (#esplorazionespaziale OR #missionispaziali OR #agenziaspaziale OR #astronauti OR #alieni OR #pianeti OR #galassia OR #spazio OR #stelle OR #viaggispaziali) lang:IT -is:retweet -is:reply -has:links","rule_italia_012");
 			rules.put("(malattie OR cancro OR terapie OR dottori OR ospedali) OR (#cancro OR #terapie OR #dottori OR #ospedali OR #malattie OR #alzheimer) lang:IT -is:retweet -is:reply -has:links","rule_italia_013");
 			rules.put("(bambini OR asili OR infanzia) OR (#formazioneprimaria OR #scuolaprimaria OR #asili OR #infanzia OR #bambini) lang:IT -is:retweet -is:reply -has:links","rule_italia_014");
-			rules.put("(ingegneria OR informatica OR tecnologia) OR (#ingegneria OR #informatica OR #tecnologia OR #innovazione) lang:IT -is:retweet -is:reply -has:links","rule_italia_015");
+			//rules.put("(ingegneria OR informatica OR tecnologia) OR (#ingegneria OR #informatica OR #tecnologia OR #innovazione) lang:IT -is:retweet -is:reply -has:links","rule_italia_015");
 			rules.put("(formazione OR didattica OR medie OR superiori OR laurea) OR (#didattica OR #formazione OR #dad OR #scuolemedie OR #scuolesuperiori OR #univerisita OR #laurea OR #formazioneadistanza) lang:IT -is:retweet -is:reply -has:links","rule_italia_016");
 			rules.put("(criminalita OR carceri OR delinquenza OR illegalita OR giustizia) OR (#giustizia OR #criminalita OR #carceri OR #illegalita OR #delinquenza OR #sicurezza) lang:IT -is:retweet -is:reply -has:links","rule_italia_017");
-			rules.put("(olimpiadi) OR (#olimpiadi) lang:IT -is:retweet -is:reply -has:links","rule_italia_018");
-			rules.put("(campionato OR calcio OR legacalcio OR seriea OR coppe) OR (#campionato OR #calcio) lang:IT -is:retweet -is:reply -has:links","rule_italia_019");
+			//rules.put("(olimpiadi) OR (#olimpiadi) lang:IT -is:retweet -is:reply -has:links","rule_italia_018");
+			rules.put("(campionato OR calcio OR legacalcio OR seriea OR coppeeuropee) OR (#campionato OR #calcio) lang:IT -is:retweet -is:reply -has:links","rule_italia_019");
 			rules.put("(autori OR televisione OR radioitaliana OR attori OR registi OR modelle OR fotografia OR arteitaliana) OR (#cinemaitaliano OR #televisione OR #radioitaliana OR #attori OR #registi OR #modelle OR #fotografia OR #arteitaliana) lang:IT -is:retweet -is:reply -has:links","rule_italia_020");
 
 			/*
