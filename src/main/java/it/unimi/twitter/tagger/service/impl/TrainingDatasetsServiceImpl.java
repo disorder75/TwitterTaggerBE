@@ -11,6 +11,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.datumbox.framework.core.common.text.StringCleaner;
+
 import it.unimi.twitter.tagger.domain.TrainingDatasets;
 import it.unimi.twitter.tagger.dto.ClassificationDto;
 import it.unimi.twitter.tagger.repository.TrainingDatasetsRepository;
@@ -19,7 +21,7 @@ import it.unimi.twitter.tagger.utils.ReadUtils;
 import lombok.extern.slf4j.Slf4j;
 
 
-@Service("TrainingDatasetsService")
+@Service("DatumboxTrainingDatasetsService")
 @Slf4j
 public class TrainingDatasetsServiceImpl implements TrainingDatasetsService {
 	
@@ -40,7 +42,16 @@ public class TrainingDatasetsServiceImpl implements TrainingDatasetsService {
 	}
 
 	@Override
-	public void setClassification(ClassificationDto classification) {
+	public void setClassification(ClassificationDto classification, String bearer) {
+		
+		String text = StringCleaner.tokenizeURLs(classification.getText()).replace(StringCleaner.TOKENIZED_URL, "");
+		text = StringCleaner.tokenizeSmileys(text);
+		text = StringCleaner.removeExtraSpaces(text);
+		text = StringCleaner.removeExtraSpaces(StringCleaner.removeSymbols(text));
+		text = StringCleaner.unifyTerminators(text);
+		text = StringCleaner.removeAccents(text);
+		classification.setText(text);
+		classification.setBearer(bearer);
 		TrainingDatasets entity = new TrainingDatasets(null, classification.getBearer(), classification.getClassification(), classification.getText(), new Date());
 		tdr.saveAndFlush(entity);
 	}
@@ -54,5 +65,4 @@ public class TrainingDatasetsServiceImpl implements TrainingDatasetsService {
 	public List<TrainingDatasets> findByBearerOrderByTopicAsc(String bearer) {
 		return tdr.findByBearerOrderByTopicAsc(bearer);
 	}
-
 }

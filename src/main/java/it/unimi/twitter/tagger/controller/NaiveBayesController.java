@@ -1,6 +1,7 @@
 package it.unimi.twitter.tagger.controller;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,16 +16,17 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.datumbox.framework.core.common.text.StringCleaner;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import it.unimi.twitter.tagger.configuration.TwitterAuthApi;
 import it.unimi.twitter.tagger.configuration.TwitterStreamedData;
 import it.unimi.twitter.tagger.configuration.classifiers.NaiveBayesTwitterClassifier;
+import it.unimi.twitter.tagger.dto.ApacheNlpCategoryPredictionDto;
 import it.unimi.twitter.tagger.dto.ClassificationDto;
 import it.unimi.twitter.tagger.service.TrainingDatasetsService;
 import lombok.extern.slf4j.Slf4j;
+import opennlp.tools.doccat.DocumentCategorizerME;
 
 @RestController
 @RequestMapping(NaiveBayesController.ROOT_API)
@@ -45,7 +47,6 @@ public class NaiveBayesController {
 	private NaiveBayesTwitterClassifier naiveBayesTwitterClassifier;
 	@Autowired
 	private TwitterAuthApi twitterAuthApi;
-
 	
 	@GetMapping(path = "version", produces = MediaType.APPLICATION_JSON_VALUE )
 	public String getVerison() {
@@ -57,53 +58,72 @@ public class NaiveBayesController {
 	public ResponseEntity<String> getTweetPredict() {
 		log.info("predict tweet and send to the client");
 		/*
-		 *		Get the tweet 
+		 *		Get the tweet from the cached queue 
 		 */
 		if (twStreamingData.isEmpty())
 			return new ResponseEntity<String>("", HttpStatus.OK);
 		
-		//String tweet = twStreamingData.peek();
 		String tweet = twStreamingData.remove();
 		
 		/*
 		 *		Predict 
 		 */
-		String prediction = naiveBayesTwitterClassifier.naiveBayesKnowledgeBasePredict(tweet);
+		
+		ApacheNlpCategoryPredictionDto prediction = null;
+		try {
+			prediction = naiveBayesTwitterClassifier.naiveBayesPredictSentenceByApacheNlp(tweet);
+		} catch (IOException e) {
+			StringBuilder sbErrMsg = new StringBuilder("Prediction failed. Err. ").append(e.getMessage());
+			return new ResponseEntity<String>(sbErrMsg.toString(), HttpStatus.FORBIDDEN);
+		} catch (URISyntaxException e) {
+			StringBuilder sbErrMsg = new StringBuilder("Invalid configuration. Err. ").append(e.getMessage());
+			return new ResponseEntity<String>(sbErrMsg.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+		
+		DocumentCategorizerME categories = prediction.getDocumentCategorizerME();
+		double[] probability = prediction.getProbabilitiesOfOutcomes();
+		log.info("getNumberOfCategories {}", categories.getNumberOfCategories());
+		log.info("probabilitiesOfOutcomes {}", categories.getAllResults(probability));
+		log.info("getBestCategory {}", categories.getBestCategory(probability));
+
 		/*
 		 *		Add the prediction result to the tweet (convert json-string and add the new property) 
 		 */
 		JsonParser jsonParser = new JsonParser();
 		JsonObject jsonObject = (JsonObject) jsonParser.parse(tweet);
-		jsonObject.addProperty("prediction", prediction);
-
+		jsonObject.addProperty("prediction", categories.getBestCategory(probability));
+		jsonObject.addProperty("predictionsWithProbabilities", categories.getAllResults(probability));
+		
 		return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.OK);
 	}
 
 	@PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> training(@RequestHeader("Authorization") String bearer, @RequestBody ClassificationDto classification) {
 
+		/*
+		 *		Verify current running bearer 
+		 */
+		if(twitterAuthApi.getBearer() == null) {
+			return new ResponseEntity<String>("Please perform a new login.", HttpStatus.FORBIDDEN);
+		}
 		
 		if(twitterAuthApi.getBearer().compareToIgnoreCase(bearer) != 0) {
 			return new ResponseEntity<String>("NaiveBayes engine is running for a different bearer, please perform a new login.", HttpStatus.FORBIDDEN);
 		}
 		
-		log.info("classification: {}", classification);		
-		String text = StringCleaner.tokenizeURLs(classification.getText()).replace(StringCleaner.TOKENIZED_URL, "");
-		text = StringCleaner.tokenizeSmileys(text);
-		text = StringCleaner.removeExtraSpaces(text);
-		text = StringCleaner.removeExtraSpaces(StringCleaner.removeSymbols(text));
-		text = StringCleaner.unifyTerminators(text);
-		text = StringCleaner.removeAccents(text);
-		classification.setText(text);
-		classification.setBearer(bearer);
-		trainingDatasetService.setClassification(classification);
-		log.info("classified: {}", classification);
 		/*
-		 *		Re-training 
+		 *		Store the classified text 
 		 */
+		log.info("storing classification for {}", classification.getClassification());		
+		trainingDatasetService.setClassification(classification, bearer);
+
+		/*
+		 *		Re-training the model
+		 */
+		log.info("Re-training model on the fly");
 		boolean trained = false;
 		try {
-			naiveBayesTwitterClassifier.trainNaiveBayesKnowledgeBase(bearer);
+			naiveBayesTwitterClassifier.trainNaiveBayesKnowledgeBaseApacheNlp(bearer);
 			trained = true;
 		} catch (IOException e) {
 			log.error("failed to re-train the model", e);

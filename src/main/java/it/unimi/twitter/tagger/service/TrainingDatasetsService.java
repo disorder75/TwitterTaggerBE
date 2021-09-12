@@ -11,8 +11,8 @@ import it.unimi.twitter.tagger.dto.ClassificationDto;
 public interface TrainingDatasetsService {
 
 	public void uploadTopicDataset(String topic, InputStream is) throws IOException, IllegalArgumentException;
-	public void setClassification(ClassificationDto classification);
 	public List<TrainingDatasets> findAllByOrderByTopicAsc();
 	public List<TrainingDatasets> findByBearerOrderByTopicAsc(String bearer);
+	void setClassification(ClassificationDto classification, String bearer);
 	
 }

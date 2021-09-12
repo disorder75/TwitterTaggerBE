@@ -3,6 +3,7 @@ package it.unimi.twitter.tagger.configuration.classifiers;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -27,6 +28,8 @@ import com.datumbox.framework.old.naive.bayes.dataobjects.NaiveBayesKnowledgeBas
 import com.datumbox.framework.old.naive.bayes.machinelearning.classifiers.NaiveBayes;
 
 import it.unimi.twitter.tagger.domain.TrainingDatasets;
+import it.unimi.twitter.tagger.dto.ApacheNlpCategoryPredictionDto;
+import it.unimi.twitter.tagger.service.TrainingDataApacheNlpService;
 import it.unimi.twitter.tagger.service.TrainingDatasetsService;
 import it.unimi.twitter.tagger.utils.ReadUtils;
 import lombok.Data;
@@ -41,9 +44,12 @@ public class NaiveBayesTwitterClassifier {
 	
 	@Autowired
 	private TrainingDatasetsService trainingDatasetService;
+	@Autowired
+	private TrainingDataApacheNlpService trainingDataApacheNlpService;
 	
 	@PostConstruct
 	public void init() throws IOException {
+		log.info("start training for Datumbox (deprecated)");
 		trainNaiveBayesKnowledgeBase();
 	}
 
@@ -100,7 +106,7 @@ public class NaiveBayesTwitterClassifier {
         knowledgeBase = nb.getKnowledgeBase();
 	}
 
-	public void trainNaiveBayesKnowledgeBase(String bearer) throws IOException {
+	public void trainNaiveBayesKnowledgeBaseDatumbox(String bearer) throws IOException {
 		/*
 		 *		Load data for training from the database 
 		 */
@@ -152,12 +158,25 @@ public class NaiveBayesTwitterClassifier {
         knowledgeBase = nb.getKnowledgeBase();
 	}
 
+	public void trainNaiveBayesKnowledgeBaseApacheNlp(String bearer) throws IOException {
+		log.info("start new training for user bearer {}", bearer);
+		File fTrainingData = trainingDataApacheNlpService.writeTrainDataOnFilesystem(bearer);
+		trainingDataApacheNlpService.train(fTrainingData);
+		log.info("new training completed. Source data in {}", fTrainingData.getAbsoluteFile());
+	}
 	
-	public String naiveBayesKnowledgeBasePredict(String text) {
+	@Deprecated
+	public String naiveBayesKnowledgeBasePredictByDatumbox(String sentence) {
         //Use classifier
 		NaiveBayes nb = new NaiveBayes(knowledgeBase);
-		return nb.predict(text);
+		return nb.predict(sentence);
 	}
+
+	
+	public ApacheNlpCategoryPredictionDto naiveBayesPredictSentenceByApacheNlp(String sentence) throws IOException, URISyntaxException {
+		return trainingDataApacheNlpService.getPrediction(sentence);
+	}
+
 	
 	public void trainBernoulliNaiveBayes() {
 		/*
