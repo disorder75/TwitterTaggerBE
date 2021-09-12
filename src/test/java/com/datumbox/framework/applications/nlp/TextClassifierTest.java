@@ -52,8 +52,8 @@ import org.springframework.test.context.ActiveProfiles;
  *
  * @author Vasilis Vryniotis <bbriniotis@datumbox.com>
  */
-@SpringBootTest
-@ActiveProfiles(profiles = "prod")
+//@SpringBootTest
+//@ActiveProfiles(profiles = "prod")
 @Slf4j
 public class TextClassifierTest extends AbstractTest {
 

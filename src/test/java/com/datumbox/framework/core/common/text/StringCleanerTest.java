@@ -31,8 +31,8 @@ import lombok.extern.slf4j.Slf4j;
  *
  * @author Vasilis Vryniotis <bbriniotis@datumbox.com>
  */
-@SpringBootTest
-@ActiveProfiles(profiles = "prod")
+//@SpringBootTest
+//@ActiveProfiles(profiles = "prod")
 @Slf4j
 public class StringCleanerTest extends AbstractTest {
 
