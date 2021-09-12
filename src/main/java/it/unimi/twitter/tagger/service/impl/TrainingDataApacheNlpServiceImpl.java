@@ -45,6 +45,9 @@ import opennlp.tools.util.model.ModelUtil;
 @Slf4j
 public class TrainingDataApacheNlpServiceImpl implements TrainingDataApacheNlpService {
 
+	private static final String TMP_DOCUMENTCATEGORIZER_BIN = "/documentcategorizer.bin";
+	private static final String TMP_TOKENIZERDATA_TXT = "/tokenizerdata.txt";
+	private static final String TMP_TRAINDATA_TXT = "/traindata.txt";
 	private DoccatModel trainedModel;
 	private File fTrainedModelSerialized;
 	private File fTrainData;
@@ -64,7 +67,7 @@ public class TrainingDataApacheNlpServiceImpl implements TrainingDataApacheNlpSe
 	@Override
 	public File writeTrainDataOnFilesystem(String bearer) throws IOException {
 		List<TrainingDatasets> data = tdr.findByBearerOrderByTopicAsc(bearer);
-		fTrainData = new File("/tmp/traindata.txt");
+		fTrainData = new File(TMP_TRAINDATA_TXT);
 		fTrainData.createNewFile();
 		FileOutputStream oFile = new FileOutputStream(fTrainData, false);
 		data.parallelStream().forEach(d -> {
@@ -76,13 +79,13 @@ public class TrainingDataApacheNlpServiceImpl implements TrainingDataApacheNlpSe
 			}
 		});
 		oFile.close();
-		log.info("trainining data dumped in /tmp/traindata.txt");
+		log.info("trainining data dumped in " + TMP_TRAINDATA_TXT);
 		return fTrainData;
 	}
 
 	@Override
 	public File writeTokenizeRulesOnFilesystem() throws IOException {
-		fTokenizerData = new File("/tmp/tokenizerdata.txt");
+		fTokenizerData = new File(TMP_TOKENIZERDATA_TXT);
 		fTokenizerData.createNewFile();
 		FileOutputStream otokenfos = new FileOutputStream(fTokenizerData, false);
 		String tokenData = "This is one example of tokenizer.\n" + "I<SPLIT>, you<SPLIT>, everyone can tokenize.\n"
@@ -92,7 +95,7 @@ public class TrainingDataApacheNlpServiceImpl implements TrainingDataApacheNlpSe
 
 		otokenfos.write(tokenData.getBytes());
 		otokenfos.close();
-		log.info("rules for tokens dumped in /tmp/tokenizerdata.txt");
+		log.info("rules for tokens dumped in " + TMP_TOKENIZERDATA_TXT);
 		return fTokenizerData;
 	}
 
@@ -118,7 +121,7 @@ public class TrainingDataApacheNlpServiceImpl implements TrainingDataApacheNlpSe
 		// Serialize model to some file so that next time we don't have to again train a
 		// model. Next time We can just load this file directly into model.
 		// NB: Use this if the production machine keeps you files on filesystem
-		fTrainedModelSerialized = new File("/tmp/documentcategorizer.bin");
+		fTrainedModelSerialized = new File(TMP_DOCUMENTCATEGORIZER_BIN);
 		fTrainedModelSerialized.createNewFile();
 		trainedModel.serialize(fTrainedModelSerialized);
 		return trainedModel;
