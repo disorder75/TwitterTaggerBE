@@ -45,15 +45,10 @@ import opennlp.tools.util.model.ModelUtil;
 @Slf4j
 public class TrainingDataApacheNlpServiceImpl implements TrainingDataApacheNlpService {
 
-	private static final String TMP_DOCUMENTCATEGORIZER_BIN = "/documentcategorizer.bin";
-	private static final String TMP_TOKENIZERDATA_TXT = "/tokenizerdata.txt";
-	private static final String TMP_TRAINDATA_TXT = "/traindata.txt";
+	private static final String TMP_DOCUMENTCATEGORIZER_BIN = "/tmp/documentcategorizer.bin";
+	private static final String TMP_TOKENIZERDATA_TXT = "/tmp/tokenizerdata.txt";
+	private static final String TMP_TRAINDATA_TXT = "/tmp//traindata.txt";
 
-	private static String DOCUMENTCATEGORIZER_BIN;
-	private static String TOKENIZERDATA_TXT;
-	private static String TRAINDATA_TXT;
-
-	
 	private DoccatModel trainedModel;
 	private File fTrainedModelSerialized;
 	private File fTrainData;
@@ -67,20 +62,13 @@ public class TrainingDataApacheNlpServiceImpl implements TrainingDataApacheNlpSe
 	@PostConstruct
 	public void init() throws IOException {
 		log.info("start training for ApacheNlp (official support)");
-
-		String home = System.getenv("HOME");
-		DOCUMENTCATEGORIZER_BIN = home + TMP_DOCUMENTCATEGORIZER_BIN;
-		TOKENIZERDATA_TXT = home + TMP_TOKENIZERDATA_TXT;
-		TRAINDATA_TXT = home + TMP_TRAINDATA_TXT;
-
 		writeTokenizeRulesOnFilesystem();
-		
 	}
 
 	@Override
 	public File writeTrainDataOnFilesystem(String bearer) throws IOException {
 		List<TrainingDatasets> data = tdr.findByBearerOrderByTopicAsc(bearer);
-		fTrainData = new File(TRAINDATA_TXT);
+		fTrainData = new File(TMP_TRAINDATA_TXT);
 		fTrainData.createNewFile();
 		FileOutputStream oFile = new FileOutputStream(fTrainData, false);
 		data.parallelStream().forEach(d -> {
@@ -92,13 +80,13 @@ public class TrainingDataApacheNlpServiceImpl implements TrainingDataApacheNlpSe
 			}
 		});
 		oFile.close();
-		log.info("trainining data dumped in " + TRAINDATA_TXT);
+		log.info("trainining data dumped in " + TMP_TRAINDATA_TXT);
 		return fTrainData;
 	}
 
 	@Override
 	public File writeTokenizeRulesOnFilesystem() throws IOException {
-		fTokenizerData = new File(TOKENIZERDATA_TXT);
+		fTokenizerData = new File(TMP_TOKENIZERDATA_TXT);
 		fTokenizerData.createNewFile();
 		FileOutputStream otokenfos = new FileOutputStream(fTokenizerData, false);
 		String tokenData = "This is one example of tokenizer.\n" + "I<SPLIT>, you<SPLIT>, everyone can tokenize.\n"
@@ -108,7 +96,7 @@ public class TrainingDataApacheNlpServiceImpl implements TrainingDataApacheNlpSe
 
 		otokenfos.write(tokenData.getBytes());
 		otokenfos.close();
-		log.info("rules for tokens dumped in " + TOKENIZERDATA_TXT);
+		log.info("rules for tokens dumped in " + TMP_TOKENIZERDATA_TXT);
 		return fTokenizerData;
 	}
 
@@ -134,7 +122,7 @@ public class TrainingDataApacheNlpServiceImpl implements TrainingDataApacheNlpSe
 		// Serialize model to some file so that next time we don't have to again train a
 		// model. Next time We can just load this file directly into model.
 		// NB: Use this if the production machine keeps you files on filesystem
-		fTrainedModelSerialized = new File(DOCUMENTCATEGORIZER_BIN);
+		fTrainedModelSerialized = new File(TMP_DOCUMENTCATEGORIZER_BIN);
 		fTrainedModelSerialized.createNewFile();
 		trainedModel.serialize(fTrainedModelSerialized);
 		return trainedModel;
