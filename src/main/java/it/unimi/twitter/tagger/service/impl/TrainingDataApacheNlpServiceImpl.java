@@ -47,7 +47,7 @@ public class TrainingDataApacheNlpServiceImpl implements TrainingDataApacheNlpSe
 
 	private static final String TMP_DOCUMENTCATEGORIZER_BIN = "/tmp/documentcategorizer.bin";
 	private static final String TMP_TOKENIZERDATA_TXT = "/tmp/tokenizerdata.txt";
-	private static final String TMP_TRAINDATA_TXT = "/tmp//traindata.txt";
+	private static final String TMP_TRAINDATA_TXT = "/tmp/traindata.txt";
 
 	private DoccatModel trainedModel;
 	private File fTrainedModelSerialized;

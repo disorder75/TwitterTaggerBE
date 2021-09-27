@@ -2,6 +2,7 @@ package it.unimi.twitter.tagger.controller;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,6 +26,7 @@ import it.unimi.twitter.tagger.configuration.classifiers.NaiveBayesTwitterClassi
 import it.unimi.twitter.tagger.dto.ApacheNlpCategoryPredictionDto;
 import it.unimi.twitter.tagger.dto.ClassificationDto;
 import it.unimi.twitter.tagger.service.TrainingDatasetsService;
+import it.unimi.twitter.tagger.streaming.receiver.TwitterStreamingReceiver;
 import lombok.extern.slf4j.Slf4j;
 import opennlp.tools.doccat.DocumentCategorizerME;
 
@@ -56,6 +58,11 @@ public class NaiveBayesController {
 
 	@GetMapping(path = "predict", produces = MediaType.APPLICATION_JSON_VALUE )
 	public ResponseEntity<String> getTweetPredict() {
+
+		ApacheNlpCategoryPredictionDto prediction = null;
+		JsonParser jsonParser = null;
+		JsonObject jsonObject = null;
+		
 		log.info("predict tweet and send to the client");
 		/*
 		 *		Get the tweet from the cached queue 
@@ -64,14 +71,29 @@ public class NaiveBayesController {
 			return new ResponseEntity<String>("", HttpStatus.OK);
 		
 		String tweet = twStreamingData.remove();
+		if (tweet.contains(TwitterStreamingReceiver.FAILED_TO_CONNECT_TO_TWITTER_AT)) {
+			tweet = "Twitter not available, consumed all api. Wait at least 15 minutes";
+			return new ResponseEntity<String>(tweet, HttpStatus.FORBIDDEN);
+		} 
 		
 		/*
 		 *		Predict 
 		 */
-		
-		ApacheNlpCategoryPredictionDto prediction = null;
 		try {
 			prediction = naiveBayesTwitterClassifier.naiveBayesPredictSentenceByApacheNlp(tweet);
+			DocumentCategorizerME categories = prediction.getDocumentCategorizerME();
+			double[] probability = prediction.getProbabilitiesOfOutcomes();
+			log.info("getNumberOfCategories {}", categories.getNumberOfCategories());
+			log.info("probabilitiesOfOutcomes {}", categories.getAllResults(probability));
+			log.info("getBestCategory {}", categories.getBestCategory(probability));
+			/*
+			 *		Add the prediction result to the tweet (convert json-string and add the new property) 
+			 */
+			jsonParser = new JsonParser();
+			jsonObject = (JsonObject) jsonParser.parse(tweet);
+			jsonObject.addProperty("prediction", categories.getBestCategory(probability));
+			jsonObject.addProperty("predictionsWithProbabilities", categories.getAllResults(probability));
+
 		} catch (IOException e) {
 			StringBuilder sbErrMsg = new StringBuilder("Prediction failed. Err. ").append(e.getMessage());
 			return new ResponseEntity<String>(sbErrMsg.toString(), HttpStatus.FORBIDDEN);
@@ -79,20 +101,6 @@ public class NaiveBayesController {
 			StringBuilder sbErrMsg = new StringBuilder("Invalid configuration. Err. ").append(e.getMessage());
 			return new ResponseEntity<String>(sbErrMsg.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-		
-		DocumentCategorizerME categories = prediction.getDocumentCategorizerME();
-		double[] probability = prediction.getProbabilitiesOfOutcomes();
-		log.info("getNumberOfCategories {}", categories.getNumberOfCategories());
-		log.info("probabilitiesOfOutcomes {}", categories.getAllResults(probability));
-		log.info("getBestCategory {}", categories.getBestCategory(probability));
-
-		/*
-		 *		Add the prediction result to the tweet (convert json-string and add the new property) 
-		 */
-		JsonParser jsonParser = new JsonParser();
-		JsonObject jsonObject = (JsonObject) jsonParser.parse(tweet);
-		jsonObject.addProperty("prediction", categories.getBestCategory(probability));
-		jsonObject.addProperty("predictionsWithProbabilities", categories.getAllResults(probability));
 		
 		return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.OK);
 	}

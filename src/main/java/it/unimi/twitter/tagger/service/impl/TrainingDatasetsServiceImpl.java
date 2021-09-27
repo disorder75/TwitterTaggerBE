@@ -50,6 +50,7 @@ public class TrainingDatasetsServiceImpl implements TrainingDatasetsService {
 		text = StringCleaner.removeExtraSpaces(StringCleaner.removeSymbols(text));
 		text = StringCleaner.unifyTerminators(text);
 		text = StringCleaner.removeAccents(text);
+		text = text.replace("RT", "");
 		classification.setText(text);
 		classification.setBearer(bearer);
 		TrainingDatasets entity = new TrainingDatasets(null, classification.getBearer(), classification.getClassification(), classification.getText(), new Date());

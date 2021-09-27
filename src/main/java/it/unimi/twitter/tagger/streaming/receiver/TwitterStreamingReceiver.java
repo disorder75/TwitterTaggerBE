@@ -44,6 +44,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class TwitterStreamingReceiver {
 
+	public static final String FAILED_TO_CONNECT_TO_TWITTER_AT = "failed to connect to twitter at ";
 	private final static String queryStr = "?";
 	private final static String querySep = "&";
 	private final static String twitterSearchStreamApiUrl = "https://api.twitter.com/2/tweets/search/stream";
@@ -58,7 +59,7 @@ public class TwitterStreamingReceiver {
 	@Autowired
 	TwitterAuthApi twAuthApi;
 
-	@Scheduled(fixedDelay = 1000 * 10)
+	@Scheduled(fixedDelay = 1500 * 10)
 	public void streamTweets() {
 		/*
 		 *		Twitter API restriction:
@@ -82,7 +83,7 @@ public class TwitterStreamingReceiver {
 		} finally {
 			if(onError) {
 				twStreamingData.clear();
-				String errDesc = "failed to connect to twitter at " + ZonedDateTime.now() + "  Try later";
+				String errDesc = FAILED_TO_CONNECT_TO_TWITTER_AT + ZonedDateTime.now() + "  Try later";
 				twStreamingData.add("{\"Error\" : \"" + errDesc + "\"}");
 			}
 		}

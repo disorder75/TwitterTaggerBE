@@ -247,8 +247,5 @@ public class NaiveBayesTwitterClassifier {
         instance.close();
         instance = MLBuilder.load(TextClassifier.class, storageName, configuration);
         
-//        Record pred = instance.predict("Gli italiani sono stanchi degli attuali politici");
-//        log.info("prediction: {}", pred);
-
 	}
 }
